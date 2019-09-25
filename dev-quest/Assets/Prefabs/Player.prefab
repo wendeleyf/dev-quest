@@ -139,7 +139,7 @@ MonoBehaviour:
   speed: 10
   jumpForce: 20
   climbSpeed: 5
-  deathKick: {x: 25, y: 25}
+  deathKick: {x: 100, y: 100}
 --- !u!114 &114550572203593062
 MonoBehaviour:
   m_ObjectHideFlags: 1
