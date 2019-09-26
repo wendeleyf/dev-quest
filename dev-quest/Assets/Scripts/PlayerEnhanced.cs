@@ -13,7 +13,6 @@ public class PlayerEnhanced : MonoBehaviour {
     BoxCollider2D playerFeetCollider;
     float gravityScaleAtStart;
 
-
     [Space]
     [Header("Stats")]
     public float speed = 10;
@@ -37,8 +36,6 @@ public class PlayerEnhanced : MonoBehaviour {
 
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
-        print(y);
-        print(x);
         Vector2 dir = new Vector2(x, y);
 
         Walk(dir);
@@ -55,12 +52,15 @@ public class PlayerEnhanced : MonoBehaviour {
     }
 
     private void Jump() {
+
         if (!playerFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
             return;
         }
+
         if (Input.GetButtonDown("Jump")) {
             playerBody.velocity = new Vector2(playerBody.velocity.x, 0);
-            playerBody.velocity += Vector2.up * jumpForce;
+            // playerBody.velocity += Vector2.up * jumpForce;
+            playerBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
 
