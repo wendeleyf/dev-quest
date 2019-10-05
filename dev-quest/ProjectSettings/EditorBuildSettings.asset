@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Levels/Main Menu.unity
     guid: 513363469c22e2c4e801bcc2999d2848
   - enabled: 1
+    path: Assets/Levels/Level 0.unity
+    guid: a9434be0988de24479262de32a24178c
+  - enabled: 1
     path: Assets/Levels/Level 1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -17,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Level 3.unity
     guid: c33f70b317c8c114db0b85c190859b86
+  - enabled: 1
+    path: Assets/Levels/Level 4.unity
+    guid: 22685f61f1ec673499358f9aaff60662
+  - enabled: 1
+    path: Assets/Levels/Level 5.unity
+    guid: 1f9a23cdfd55d014f926409279aff406
   m_configObjects: {}
