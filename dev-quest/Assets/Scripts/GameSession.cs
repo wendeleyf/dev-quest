@@ -11,6 +11,7 @@ public class GameSession : MonoBehaviour {
     [SerializeField] int playerLives = 3;
     [SerializeField] Text livesText;
     [SerializeField] Player player;
+    [SerializeField] GameObject dialogManager;
 
     private void Awake() {
         int numGameSession = FindObjectsOfType<GameSession>().Length;
@@ -23,7 +24,6 @@ public class GameSession : MonoBehaviour {
 
 
     }
-
     // Use this for initialization
     void Start () {
         livesText.text = playerLives.ToString();
@@ -43,6 +43,7 @@ public class GameSession : MonoBehaviour {
         var CurrentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(CurrentSceneIndex);
         livesText.text = playerLives.ToString();
+        dialogManager.GetComponent<Dialog>().continueButton.SetActive(true);
     }
 
     private void ResetGameSession() {

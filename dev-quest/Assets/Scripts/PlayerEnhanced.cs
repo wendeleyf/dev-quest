@@ -12,6 +12,7 @@ public class PlayerEnhanced : MonoBehaviour {
     CapsuleCollider2D playerBodyCollider2D;
     BoxCollider2D playerFeetCollider;
     float gravityScaleAtStart;
+    private AudioSource source;
 
     [Space]
     [Header("Stats")]
@@ -27,6 +28,7 @@ public class PlayerEnhanced : MonoBehaviour {
         playerBodyCollider2D = GetComponent<CapsuleCollider2D>();
         playerFeetCollider = GetComponent<BoxCollider2D>();
         gravityScaleAtStart = playerBody.gravityScale;
+        source = GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -59,6 +61,7 @@ public class PlayerEnhanced : MonoBehaviour {
 
         if (Input.GetButtonDown("Jump")) {
             playerBody.velocity = new Vector2(playerBody.velocity.x, 0);
+            source.Play();
             // playerBody.velocity += Vector2.up * jumpForce;
             playerBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
