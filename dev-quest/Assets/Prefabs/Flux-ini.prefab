@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222359036201985714}
   - component: {fileID: 114664582984036662}
   m_Layer: 5
-  m_Name: Item
+  m_Name: Flux-ini
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300008, guid: 2323253226cd3b5438df16d060f117a9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4224d36fb61dc244b90d41c3ebba7364, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

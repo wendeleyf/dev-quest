@@ -6,5 +6,7 @@ public class Inventory : MonoBehaviour {
 
     public bool[] isFull;
     public GameObject[] slots;
-
+    public bool fluxInicio;
+    public bool fluxProcess;
+    public bool fluxDecision;
 }

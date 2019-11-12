@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pickup : MonoBehaviour {
+public class PickupProcess : MonoBehaviour {
 
     private Inventory inventory;
     public GameObject item;
@@ -20,7 +20,7 @@ public class Pickup : MonoBehaviour {
             for (int i = 0; i < inventory.slots.Length; i++) {
                 if(inventory.isFull[i] == false) {
                     inventory.isFull[i] = true;
-                    inventory.fluxInicio = true;
+                    inventory.fluxProcess = true;
                     Instantiate(item, inventory.slots[i].transform, false);
                     Destroy(gameObject);
                     break;
